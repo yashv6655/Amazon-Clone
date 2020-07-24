@@ -3,13 +3,13 @@ require("dotenv").config();
 
 const firebaseApp = firebase.initializeApp({
   apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: "clone-a3e08.firebaseapp.com",
-  databaseURL: "https://clone-a3e08.firebaseio.com",
-  projectId: "clone-a3e08",
-  storageBucket: "clone-a3e08.appspot.com",
-  messagingSenderId: "992178807399",
-  appId: "1:992178807399:web:ec0ab5812efdf123a92ac2",
-  measurementId: "G-DVMMK9Q48V",
+  authDomain: process.env.AUTH_DOMAIN,
+  databaseURL: process.env.DATABASE_URL,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGE_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
 });
 
 const db = firebaseApp.firestore();
